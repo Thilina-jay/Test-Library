@@ -1,5 +1,5 @@
 <?php
-    $connection = mysqli_connect("localhost", "root", "", "demo");
+    $connection = mysqli_connect("localhost", "root", "", "library_system");
 
  
     if (!$connection) {

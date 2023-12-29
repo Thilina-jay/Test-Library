@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Database connection failed: " . mysqli_connect_error());
     }
 
-    $db = mysqli_select_db($connection, "demo");
+    $db = mysqli_select_db($connection, "library_system");
     if (!$db) {
         die("Database selection failed: " . mysqli_error($connection));
     }

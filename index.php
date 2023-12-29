@@ -86,7 +86,7 @@ if (isset($_POST['login'])) {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "demo";
+    $dbname = "library_system";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 

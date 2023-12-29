@@ -1,6 +1,6 @@
 <?php
 $connection = mysqli_connect("localhost", "root", "");
-$db = mysqli_select_db($connection, "demo");
+$db = mysqli_select_db($connection, "library_system");
 
 // Assuming your form includes a hidden input field named 'user_id'
 $user_id = $_POST['user_id'];
