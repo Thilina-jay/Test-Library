@@ -2,7 +2,7 @@
 	session_start();
 	function get_user_issue_book_count(){
 		$connection = mysqli_connect("localhost","root","");
-		$db = mysqli_select_db($connection,"demo");
+		$db = mysqli_select_db($connection,"library_system");
 		$user_issue_book_count = 0;
 		$query = "select count(*) as user_issue_book_count from issued_books where student_id = $_SESSION[id]";
 		$query_run = mysqli_query($connection,$query);
@@ -66,6 +66,7 @@
                     <div class="dropdown-divider"></div>
 	        		<a class="dropdown-item" href="alldata.php">All data</a>
 	        	</div>
+				
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link" href="logout.php">Logout</a>
