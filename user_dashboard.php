@@ -66,6 +66,7 @@
                     <div class="dropdown-divider"></div>
 	        		<a class="dropdown-item" href="alldata.php">All data</a>
 	        	</div>
+				
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link" href="logout.php">Logout</a>
