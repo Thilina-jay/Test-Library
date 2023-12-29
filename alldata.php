@@ -6,7 +6,7 @@ if (!$connection) {
     die("Database connection failed: " . mysqli_connect_error());
 }
 
-$db = mysqli_select_db($connection, "demo");
+$db = mysqli_select_db($connection, "library_system");
 if (!$db) {
     die("Database selection failed: " . mysqli_error($connection));
 }
@@ -32,7 +32,7 @@ mysqli_close($connection);
     <script type="text/javascript" src="bootstrap-4.4.1/js/bootstrap.min.js"></script>
     <style type="text/css">
         .navbar-brand img {
-            width:auto;
+            width: auto;
             height: 30px;
         }
 
@@ -72,14 +72,13 @@ mysqli_close($connection);
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="change_password.php">Change Password</a>
                     <div class="dropdown-divider"></div>
-	        		<a class="dropdown-item" href="alldata.php">All data</a>
+                    <a class="dropdown-item" href="alldata.php">All data</a>
                 </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="logout.php">Logout</a>
             </li>
         </ul>
-        </div>
     </nav><br>
     <center>
         <h4> User Records</h4><br>
@@ -94,6 +93,7 @@ mysqli_close($connection);
                     <th>Username</th>
                     <th>Password</th>
                     <th>Email Address</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -106,6 +106,19 @@ mysqli_close($connection);
                     echo "<td>" . $row['username'] . "</td>";
                     echo "<td>" . $row['password'] . "</td>";
                     echo "<td>" . $row['email'] . "</td>";
+                    echo "<td>";
+
+                    // Check if the current row is the same as the currently logged-in user
+                    if ($_SESSION['username'] != $row['username']) {
+                        echo '<form method="post" action="delete_user.php" onsubmit="return confirm(\'Are you sure you want to delete this user?\')">';
+                        echo '<input type="hidden" name="user_id" value="' . $row['user_id'] . '">';
+                        echo '<button type="submit" name="delete_user" class="btn btn-danger">Delete</button>';
+                        echo '</form>';
+                    } else {
+                        echo 'Cannot Delete';
+                    }
+
+                    echo "</td>";
                     echo "</tr>";
                 }
                 ?>

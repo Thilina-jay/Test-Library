@@ -24,6 +24,12 @@
 		width: 200px;
 		height: 650px;
 	}
+	#sidebar-image {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Adjust margin as needed */
+	}
 </style>
 </head>
 <body>
@@ -44,9 +50,7 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="index.php">Staff Login</a>
 		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="index.php">User Login</a>
-		      </li>
+
 		    
 		    </ul>
 		</div>
@@ -63,6 +67,7 @@
 				<li>Explore the expansive digital universe of Books Byte, boasting a rich collection of over 10,000+ books and 25,000+ ebooks. Immerse yourself in a vast repository for comprehensive knowledge and learning.</li>
 				
 			</ul>
+			<img src="login.png" alt="Image Description" id="sidebar-image">
 		</div>
         <div class="col-md-8" id="main_content">
 			<center><h3>Admin Login</h3></center>
@@ -86,7 +91,7 @@ if (isset($_POST['login'])) {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "demo";
+    $dbname = "library_system";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
