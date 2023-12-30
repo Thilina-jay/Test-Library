@@ -65,7 +65,7 @@ mysqli_close($connection);
         margin-right: 10px;
     }
 </style>
- </style>
+
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

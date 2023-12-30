@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+
 <head>
     <title>View Profile</title>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
