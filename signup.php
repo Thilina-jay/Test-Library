@@ -28,7 +28,7 @@
     max-width: 80%;
     height: auto;
     display: block;
-    margin: 20px auto; /* Adjust margin as needed */
+    margin: 20px auto; 
 	}
 </style>
 </head>
